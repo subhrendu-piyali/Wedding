@@ -1,8 +1,13 @@
 h1{
 	text-align: center;
 	font-family: Brush Script MT;
-	color: #040220;
-	font-size: 65px;
+	color: #ffffff;
+	font-size: 45px;
+}
+button{
+	width: 55px;
+	height: 25px;
+	align-self: right;
 }
 
 body, html {
