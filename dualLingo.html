@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>শুভ্রেন্দু ও পিয়ালী</title>
+	<link rel="stylesheet" href="css/common.css">
+  <script type="text/javascript">
+        if (screen.width <= 720) {
+        window.location = "mobile/index.html";
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var language; 
+function getLanguage() {
+  (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+  $.ajax({ url:  '/language/' +  localStorage.getItem('language') + '.json', 
+    dataType: 'json', async: false, dataType: 'json', 
+    success: function (lang) { language = lang } });
+}
+///////////////////////////////////////////////////////
+function setLanguage(lang) {
+  localStorage.setItem('language', lang);
+}
+</script>
+<script>
+    $(document).ready(function(){
+      alert("Laguage"+getLanguage());
+      $('#groom').text(language.groom);
+      $('#bride').text(language.bride);
+      $('#wdate').text(language.wdate);
+    });
+</script>
+</head>
+<body>
+  <div id="language">
+    <a href="#" onclick="setLanguage('en')">English</a> 
+    <a href="#" onclick="setLanguage('bn')">বাংলা</a>
+  </div>
+  <div id="name">
+    <table>
+      <tr><td>শুভ পরিণয়</td></tr>
+      <tr><td><div id="groom"></div></td></tr>
+      <tr><td>ও</td></tr>
+      <tr><td><div id="bride"></div></td></tr>
+      <tr><td><div id="wdate"></div></td></tr>
+    </table>
+  </div>
+  
+  <nav>
+    <table id="tabs">
+      <tr>
+        <td><a href="#"><div id="about"></div></a></td>
+        <td><a href="#"><div id="place"></div></a></td>
+        <td><a href="#"><div id="registry"></div></a></td>
+        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing">ছবি আপলোড</a></td>
+      </tr>
+    </table>
+  </nav>
+
+</body>
+</html>
