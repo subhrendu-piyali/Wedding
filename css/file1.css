@@ -1,33 +1,44 @@
-h1{
-	text-align: center;
-	font-family: Brush Script MT;
-	color: #ffffff;
-	font-size: 45px;
-}
-button{
-	width: 55px;
-	height: 25px;
-	align-self: right;
-}
-
 body, html {
   height: 100%;
-  margin: 0;
+  font-family: Brush Script MT;
+  color: #deb887;
 }
-
-.banner-image {
-  background-image: url("banner.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+a{
+	text-decoration: none;
+ 	color: #ffffff;
 }
-
-.banner-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+body{
+	background: url(../imgs/bkgrnd/bkgrd4.jpg);
+	background-size: cover;
+}
+#language a{
+	padding-right: 8px;
+	font-size: 20px;
+}
+#language{
+	float: right;
+}
+table{
+	text-align: center;
+	font-size: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+#name{
+	padding-top: 40px;
+}
+nav a{
+	float: center;
+}
+#tabs{
+	font-size: 40px;
+	margin-top: 10px;
+	width: 80%;
+}
+#tabs td{
+	border-right: 1px solid #ffffff;
+}
+#end{
+	border-right: none;
 }
