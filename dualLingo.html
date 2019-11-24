@@ -9,26 +9,36 @@
     /*if (screen.width <= 720) {
         window.location = "mobile/index.html";
     }*/
-    ///////////////////////////////////////////////////////    var language; 
-    function getLanguage() {
-      (localStorage.getItem('language') == null) ? setLanguage('en') : false;
-      alert(url);
-      $.ajax({ url:  '/language/' +  localStorage.getItem('language') + '.json', 
-        dataType: 'json', async: false, dataType: 'json', 
-        success: function (lang) { language = lang } });
-    }
+    ///////////////////////////////////////////////////////    
+    var language;
+    var lang_dict;
     ///////////////////////////////////////////////////////
     function setLanguage(lang) {
+      (localStorage.getItem('language') == null) ? setLanguage('en') : false;
       localStorage.setItem('language', lang);
-      alert("Language Sample="+language.groom);
+      alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
+      getLanguage();
+      translate();
+    }
+    ///////////////////////////////////////////////////////    
+    function getLanguage() {
+      $.ajax({ url:  '/language/' +  localStorage.getItem('language') + '.json', 
+        dataType: 'json', async: false, dataType: 'json', 
+        success: function (lang) { localStorage.setItem(lang_dict = lang)} });
     }
     ///////////////////////////////////////////////////////
+    function translate(){
+      //lang_dict=localStorage.getItem(lang_dict)
+      alert("Language Sample="+lang_dict.groom);
+      $('#groom').text(lang_dict.groom);
+      $('#bride').text(lang_dict.bride);
+      $('#wdate').text(lang_dict.wdate);
+      $('#title').text(lang_dict.title);     
+    }
+
+    ///////////////////////////////////////////////////////
     $(document).ready(function(){
-      alert("Language Sample="+language.groom);
-      $('#groom').text(language.groom);
-      $('#bride').text(language.bride);
-      $('#wdate').text(language.wdate);
-      $('#title').text(language.title);
+      translate();  
     });
   </script>
 </head>
