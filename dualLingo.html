@@ -4,14 +4,12 @@
 	<meta charset="UTF-8">
 	<title id="title">শুভ্রেন্দু ও পিয়ালী</title>
 	<link rel="stylesheet" href="css/common.css">
-  <script type="text/javascript">
-        if (screen.width <= 720) {
-        window.location = "mobile/index.html";
-    }
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    var language; 
+  <script type="text/javascript">
+    /*if (screen.width <= 720) {
+        window.location = "mobile/index.html";
+    }*/
+    ///////////////////////////////////////////////////////    var language; 
     function getLanguage() {
       (localStorage.getItem('language') == null) ? setLanguage('en') : false;
       alert(url);
@@ -22,16 +20,16 @@
     ///////////////////////////////////////////////////////
     function setLanguage(lang) {
       localStorage.setItem('language', lang);
+      alert("Language Sample="+language.groom);
     }
-  </script>
-  <script>
-      $(document).ready(function(){
-        alert("Language Sample="+language.groom);
-        $('#groom').text(language.groom);
-        $('#bride').text(language.bride);
-        $('#wdate').text(language.wdate);
-        $('#title').text(language.title);
-      });
+    ///////////////////////////////////////////////////////
+    $(document).ready(function(){
+      alert("Language Sample="+language.groom);
+      $('#groom').text(language.groom);
+      $('#bride').text(language.bride);
+      $('#wdate').text(language.wdate);
+      $('#title').text(language.title);
+    });
   </script>
 </head>
 <body>
