@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title id="title">শুভ্রেন্দু ও পিয়ালী</title>
 	<link rel="stylesheet" href="css/common.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     /*if (screen.width <= 720) {
         window.location = "mobile/index.html";
@@ -14,8 +14,8 @@
     var lang_dict;
     ///////////////////////////////////////////////////////
     function setLanguage(lang) {
-      (localStorage.getItem('language') == null) ? setLanguage('en') : false;
-      localStorage.setItem('language', lang);
+      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
+      //localStorage.setItem('language', lang);
       alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
       getLanguage();
       translate();
@@ -23,13 +23,14 @@
     ///////////////////////////////////////////////////////    
     function getLanguage() {
       $.ajax({ url:  '/language/' +  localStorage.getItem('language') + '.json', 
-        dataType: 'json', async: false, dataType: 'json', 
-        success: function (lang) { localStorage.setItem(lang_dict = lang)} });
+        dataType: 'json', async: true, dataType: 'json', 
+        success: function (lang) {lang_dict =lang} });
     }
     ///////////////////////////////////////////////////////
     function translate(){
       //lang_dict=localStorage.getItem(lang_dict)
-      alert("Language Sample="+lang_dict.groom);
+      t= (localStorage.getItem('language') == 'bn') ? 'শুভ্রেন্দু ও পিয়ালী': 'Subhrendu & Piyali';
+      $('#title').text(t);
       $('#groom').text(lang_dict.groom);
       $('#bride').text(lang_dict.bride);
       $('#wdate').text(lang_dict.wdate);
