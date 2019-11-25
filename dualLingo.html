@@ -35,8 +35,10 @@
           //document.getElementById(k).innerHTML=lang_dict[k];
         }
       }
+      k="heading"
+      $('#'+k).html(lang_dict[k]);
       /*
-      $('#groom').text(lang_dict.groom);
+      
       $('#bride').text(lang_dict.bride);
       $('#wdate').text(lang_dict.wdate);
       $('#title').text(lang_dict.title);
@@ -68,14 +70,15 @@
     <a href="#" onclick="setLanguage('en')">English</a> 
     <a href="#" onclick="setLanguage('bn')">বাংলা</a>
   </div>
-  <div id="name"><center>
-    <div id="heading"></div>
-    <div id="weds"></div><br>
+  <div id="name">
+    <table>
+    <tr><td><div id="heading"></div></td></tr>
+    <!--div id="weds"></div><br>
     <div id="groom"></div><br>
     <div id="and"></div><br>
-    <div id="bride"></div><br>
-    <div id="wdate"></div>
-  </center></div>
+    <div id="bride"></div-->
+    <tr><td><div id="wdate"></div></td></tr>
+  </div>
     <!--table>
       <tr><td></td></tr>
       <tr><td></td></tr>
