@@ -15,31 +15,51 @@
     ///////////////////////////////////////////////////////
     function setLanguage(lang) {
       (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
-      //localStorage.setItem('language', lang);
-      alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
+      localStorage.setItem('language', lang);
+      //alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
       getLanguage();
-      translate();
     }
     ///////////////////////////////////////////////////////    
     function getLanguage() {
-      $.ajax({ url:  '/language/' +  localStorage.getItem('language') + '.json', 
-        dataType: 'json', async: true, dataType: 'json', 
-        success: function (lang) {lang_dict =lang} });
+      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
+      $.getJSON('https://subhrendu-piyali.github.io/Wedding/language/'+localStorage.getItem('language')+'.json', function(data) {
+        translate(localStorage.getItem('language'),data)});
     }
     ///////////////////////////////////////////////////////
-    function translate(){
-      //lang_dict=localStorage.getItem(lang_dict)
-      t= (localStorage.getItem('language') == 'bn') ? 'শুভ্রেন্দু ও পিয়ালী': 'Subhrendu & Piyali';
-      $('#title').text(t);
+    function translate(language,lang_dict){
+      (lang_dict==null)?getLanguage():false;
+      /// See all log at the bottom of the page
+      for(var k in lang_dict){
+        if (lang_dict.hasOwnProperty(k)) {
+          $('#'+k).text(lang_dict[k]);
+          //document.getElementById(k).innerHTML=lang_dict[k];
+        }
+      }
+      /*
       $('#groom').text(lang_dict.groom);
       $('#bride').text(lang_dict.bride);
       $('#wdate').text(lang_dict.wdate);
-      $('#title').text(lang_dict.title);     
+      $('#title').text(lang_dict.title);
+      $('#about').text(lang_dict.about);
+      $('#place').text(lang_dict.place);
+      $('#registry').text(lang_dict.registry);
+      $('#picupload').text(lang_dict.picupload);
+      $('#and').text(lang_dict.and);
+      $('#weds').text(lang_dict.weds);
+      */
+      $('#log').text("LOG:"+language);
+      /*
+      for(var k in lang_dict){
+        if (lang_dict.hasOwnProperty(k)) {
+          $('#log').append(",("+k+":"+lang_dict[k]+")");
+        }
+      }*/
+
     }
 
     ///////////////////////////////////////////////////////
     $(document).ready(function(){
-      translate();  
+      getLanguage();  
     });
   </script>
 </head>
@@ -50,9 +70,9 @@
   </div>
   <div id="name">
     <table>
-      <tr><td>শুভ পরিণয়</td></tr>
+      <tr><td><div id="weds"></div></td></tr>
       <tr><td><div id="groom"></div></td></tr>
-      <tr><td>ও</td></tr>
+      <tr><td><div id="and"></div></td></tr>
       <tr><td><div id="bride"></div></td></tr>
       <tr><td><div id="wdate"></div></td></tr>
     </table>
@@ -64,10 +84,10 @@
         <td><a href="#"><div id="about"></div></a></td>
         <td><a href="#"><div id="place"></div></a></td>
         <td><a href="#"><div id="registry"></div></a></td>
-        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing">ছবি আপলোড</a></td>
+        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing"><div id="picupload"></div></a></td>
       </tr>
     </table>
   </nav>
-
+<div id="log">LOG:</div>
 </body>
 </html>
