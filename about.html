@@ -30,16 +30,19 @@
       (lang_dict==null)?getLanguage():false;
       /// See all log at the bottom of the page
       for(var k in lang_dict){
+        if(document.getElementById(k)){
         if (lang_dict.hasOwnProperty(k)) {
           $('#'+k).text(lang_dict[k]);
           //document.getElementById(k).innerHTML=lang_dict[k];
-        }
+          $('#log').append(",("+k+":"+lang_dict[k]+")");
+        }}
       }
       k="heading"
       $('#'+k).html(lang_dict[k]);
       
       $('#bride').text(lang_dict.bride);
       $('#groom').text(lang_dict.groom);
+      $('#parentsB').text(lang_dict.parentsB);
       /*
       $('#wdate').text(lang_dict.wdate);
       $('#title').text(lang_dict.title);
@@ -59,7 +62,6 @@
       }*/
 
     }
-
     ///////////////////////////////////////////////////////
     $(document).ready(function(){
       getLanguage();  
@@ -77,7 +79,7 @@
   <tr>
     <td>
       <div id="bride"></div>
-      <div id="parentsB"></div>
+      <div id="parentsB">Test</div>
     </td>
     <td>
       <div id="groom"></div>
