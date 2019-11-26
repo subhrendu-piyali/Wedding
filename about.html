@@ -29,6 +29,7 @@
     function translate(language,lang_dict){
       (lang_dict==null)?getLanguage():false;
       /// See all log at the bottom of the page
+      $('#log').text("LOG:"+language);
       for(var k in lang_dict){
         if(document.getElementById(k)){
         if (lang_dict.hasOwnProperty(k)) {
@@ -53,7 +54,7 @@
       $('#and').text(lang_dict.and);
       $('#weds').text(lang_dict.weds);
       */
-      $('#log').text("LOG:"+language);
+      
       /*
       for(var k in lang_dict){
         if (lang_dict.hasOwnProperty(k)) {
