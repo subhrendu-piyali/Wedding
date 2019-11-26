@@ -1,0 +1,37 @@
+
+body, html {
+  height: 100%;
+  color: #ffffff;
+  font-family: Brush Script MT;
+}
+a{
+	text-decoration: none;
+ 	color: #ffffff;
+}
+body{
+	background: url(../imgs/bkgrnd/bkgrd1.jpg);
+	background-size: cover;
+}
+#language a{
+	padding-right: 8px;
+	font-size: 20px;
+}
+#language{
+	float: right;
+	display: block;
+}
+div{
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+}
+#main{
+	width: 100%;
+}
+h1{
+	font-size: 40px;
+}
+h2{
+	font-size: 35px;
+	text-decoration: underline;
+}
