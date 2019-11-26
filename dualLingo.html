@@ -31,8 +31,10 @@
       /// See all log at the bottom of the page
       for(var k in lang_dict){
         if (lang_dict.hasOwnProperty(k)) {
+          if (document.getElementById(k)){
           $('#'+k).text(lang_dict[k]);
-          //document.getElementById(k).innerHTML=lang_dict[k];
+            //document.getElementById(k).innerHTML=lang_dict[k];
+          }
         }
       }
       k="heading"
