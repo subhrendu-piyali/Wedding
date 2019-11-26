@@ -29,13 +29,14 @@
     function translate(language,lang_dict){
       (lang_dict==null)?getLanguage():false;
       /// See all log at the bottom of the page
+      $('#log').text("LOG:"+language);
       for(var k in lang_dict){
+        if(document.getElementById(k)){
         if (lang_dict.hasOwnProperty(k)) {
-          if (document.getElementById(k)){
           $('#'+k).text(lang_dict[k]);
-            //document.getElementById(k).innerHTML=lang_dict[k];
-          }
-        }
+          //document.getElementById(k).innerHTML=lang_dict[k];
+          $('#log').append(",("+k+":"+lang_dict[k]+")");
+        }}
       }
       k="heading"
       $('#'+k).html(lang_dict[k]);
