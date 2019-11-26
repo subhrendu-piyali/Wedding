@@ -1,0 +1,44 @@
+body, html {
+  height: 100%;
+  font-family: 'CharukolaUltraLight';
+  color: #deb887;
+}
+a{
+	text-decoration: none;
+ 	color: #ffffff;
+}
+body{
+	background: url(../imgs/bkgrnd/bkgrd4.jpg);
+	background-size: cover;
+}
+#language a{
+	padding-right: 8px;
+	font-size: 20px;
+}
+#language{
+	float: right;
+}
+table{
+	text-align: center;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+#name{
+	padding-top: 40px;
+}
+nav a{
+	float: center;
+}
+#tabs{
+	font-size: 30px;
+	margin-top: 10px;
+	width: 80%;
+}
+#tabs td{
+	border-right: 1px solid #ffffff;
+}
+#end{
+	border-right: none;
+}

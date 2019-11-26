@@ -1,0 +1,11 @@
+{
+	"en": {
+		"langdesc": "English",
+		"Start": "Start game",
+		"EndText": "Congratulations! Thank you for playing!"
+	},
+	"ge": {
+		"langdesc": "German",
+		"Start": "Spiel starten",
+		"EndText": "Gratuliere! Danke für's Spielen!"
+	}
