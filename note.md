@@ -4,3 +4,4 @@
 4. Trying again. adding id "testing" and using it in the file about.html.
 5. It works, Heaven knows atokkhon ki osubidhe hochilo...cause I had committed the changes and checked as well.
 6. jai hok...lets edit the json files first then.
+7. Again it's not working...dualLingo page is not working. Editing those json files...jinis potro ghete jache...
