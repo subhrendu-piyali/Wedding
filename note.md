@@ -7,3 +7,5 @@
 7. Again it's not working...dualLingo page is not working. Editing those json files...jinis potro ghete jache...
 8. ok. json files edit korte gelei jinis potro ghete jache, dualLingo file tar content ure jache. I am not touching them as of now.
 9. let's just use js and classes and see what happens.
+<----------------------------------------------------------------->
+about2.html file: change background. No other issues.
