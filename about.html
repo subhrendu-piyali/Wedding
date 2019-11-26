@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title id="title"></title>
+	<link rel="stylesheet" href="css/common.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    /*if (screen.width <= 720) {
+        window.location = "mobile/index.html";
+    }*/
+    ///////////////////////////////////////////////////////    
+    var language;
+    var lang_dict;
+    ///////////////////////////////////////////////////////
+    function setLanguage(lang) {
+      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
+      localStorage.setItem('language', lang);
+      //alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
+      getLanguage();
+    }
+    ///////////////////////////////////////////////////////    
+    function getLanguage() {
+      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
+      $.getJSON('https://subhrendu-piyali.github.io/Wedding/language/'+localStorage.getItem('language')+'.json', function(data) {
+        translate(localStorage.getItem('language'),data)});
+    }
+    ///////////////////////////////////////////////////////
+    function translate(language,lang_dict){
+      (lang_dict==null)?getLanguage():false;
+      /// See all log at the bottom of the page
+      for(var k in lang_dict){
+        if (lang_dict.hasOwnProperty(k)) {
+          $('#'+k).text(lang_dict[k]);
+          //document.getElementById(k).innerHTML=lang_dict[k];
+        }
+      }
+      k="heading"
+      $('#'+k).html(lang_dict[k]);
+      /*
+      
+      $('#bride').text(lang_dict.bride);
+      $('#wdate').text(lang_dict.wdate);
+      $('#title').text(lang_dict.title);
+      $('#about').text(lang_dict.about);
+      $('#place').text(lang_dict.place);
+      $('#registry').text(lang_dict.registry);
+      $('#picupload').text(lang_dict.picupload);
+      $('#and').text(lang_dict.and);
+      $('#weds').text(lang_dict.weds);
+      */
+      $('#log').text("LOG:"+language);
+      /*
+      for(var k in lang_dict){
+        if (lang_dict.hasOwnProperty(k)) {
+          $('#log').append(",("+k+":"+lang_dict[k]+")");
+        }
+      }*/
+
+    }
+
+    ///////////////////////////////////////////////////////
+    $(document).ready(function(){
+      getLanguage();  
+    });
+  </script>
+</head>
+<body>
+  <div id="language">
+    <a href="#" onclick="setLanguage('en')">English</a> 
+    <a href="#" onclick="setLanguage('bn')">বাংলা</a>
+  </div>
+
+<div>
+ 
+
+ <div id="about"></div>
+<div id="bride"></div>
+<div id="place"></div>
+
+
+
+
+
+
+
+</div>
+<div id="log">LOG:</div>
+</body></html>
