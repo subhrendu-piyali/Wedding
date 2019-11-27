@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title id="title"></title>
-  <link rel="stylesheet" href="css/common.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title id="title"></title>
+	<link rel="stylesheet" href="css/common.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     /*if (screen.width <= 720) {
         window.location = "mobile/index.html";
@@ -29,14 +29,11 @@
     function translate(language,lang_dict){
       (lang_dict==null)?getLanguage():false;
       /// See all log at the bottom of the page
-      $('#log').text("LOG:"+language);
       for(var k in lang_dict){
-        if(document.getElementById(k)){
         if (lang_dict.hasOwnProperty(k)) {
           $('#'+k).text(lang_dict[k]);
           //document.getElementById(k).innerHTML=lang_dict[k];
-          $('#log').append(",("+k+":"+lang_dict[k]+")");
-        }}
+        }
       }
       k="heading"
       $('#'+k).html(lang_dict[k]);
@@ -52,6 +49,7 @@
       $('#and').text(lang_dict.and);
       $('#weds').text(lang_dict.weds);
       */
+      $('#log').text("LOG:"+language);
       /*
       for(var k in lang_dict){
         if (lang_dict.hasOwnProperty(k)) {
@@ -67,23 +65,11 @@
     });
   </script>
 </head>
-<!------------------------------------------------------------------->
 <body>
   <div id="language">
     <a href="#" onclick="setLanguage('en')">English</a> 
     <a href="#" onclick="setLanguage('bn')">বাংলা</a>
   </div>
-  <nav>
-    <table id="tabs">
-      <tr>
-        <td><a href="about.html"><div id="about"></div></a></td>
-        <td><a href="#"><div id="place"></div></a></td>
-        <td><a href="#"><div id="registry"></div></a></td>
-        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing"><div id="picupload"></div></a></td>
-      </tr>
-    </table>
-  </nav>
-<!------------------------------------------------------------------->  
   <div id="name">
     <table>
     <tr><td><div id="heading"></div></td></tr>
@@ -102,16 +88,16 @@
     </table-->
   
   
-  <!--nav>
+  <nav>
     <table id="tabs">
       <tr>
-        <td><a href="about.html"><div id="about"></div></a></td>
+        <td><a href="#"><div id="about"></div></a></td>
         <td><a href="#"><div id="place"></div></a></td>
         <td><a href="#"><div id="registry"></div></a></td>
         <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing"><div id="picupload"></div></a></td>
       </tr>
     </table>
-  </nav-->
+  </nav>
 <div id="log">LOG:</div>
 </body>
 </html>
