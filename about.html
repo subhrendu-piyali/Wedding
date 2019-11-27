@@ -1,103 +1,108 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title id="title"></title>
-	<link rel="stylesheet" href="css/common.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    /*if (screen.width <= 720) {
-        window.location = "mobile/index.html";
-    }*/
-    ///////////////////////////////////////////////////////    
-    var language;
-    var lang_dict;
-    ///////////////////////////////////////////////////////
-    function setLanguage(lang) {
-      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
-      localStorage.setItem('language', lang);
-      //alert("Language Dict="+'/language/' +  localStorage.getItem('language') + '.json');
-      getLanguage();
-    }
-    ///////////////////////////////////////////////////////    
-    function getLanguage() {
-      (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'en') : false;
-      $.getJSON('https://subhrendu-piyali.github.io/Wedding/language/'+localStorage.getItem('language')+'.json', function(data) {
-        translate(localStorage.getItem('language'),data)});
-    }
-    ///////////////////////////////////////////////////////
-    function translate(language,lang_dict){
-      (lang_dict==null)?getLanguage():false;
-      /// See all log at the bottom of the page
-      $('#log').text("LOG:"+language);
-      for(var k in lang_dict){
-        if(document.getElementById(k)){
-        if (lang_dict.hasOwnProperty(k)) {
-          $('#'+k).text(lang_dict[k]);
-          //document.getElementById(k).innerHTML=lang_dict[k];
-          $('#log').append(",("+k+":"+lang_dict[k]+")");
-        }}
-      }
-      k="heading"
-      $('#'+k).html(lang_dict[k]);
-      
-      $('#bride').text(lang_dict.bride);
-      $('#groom').text(lang_dict.groom);
-      $('#parentsB').text(lang_dict.parentsB);
-      /*
-      $('#wdate').text(lang_dict.wdate);
-      $('#title').text(lang_dict.title);
-      $('#about').text(lang_dict.about);
-      $('#place').text(lang_dict.place);
-      $('#registry').text(lang_dict.registry);
-      $('#picupload').text(lang_dict.picupload);
-      $('#and').text(lang_dict.and);
-      $('#weds').text(lang_dict.weds);
-      */
-      
-      /*
-      for(var k in lang_dict){
-        if (lang_dict.hasOwnProperty(k)) {
-          $('#log').append(",("+k+":"+lang_dict[k]+")");
-        }
-      }*/
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>About</title>
+		<link rel="stylesheet" href="css/about.css">
+		<style type="text/css">
+				.bengali{
+			display: none;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function LangBn(){
+		      var x=document.getElementsByClassName("english");
+		      var j;
+		      for (j = 0; j < x.length; j++) {
+		      x[j].style.display = "none";}
 
-    }
-    ///////////////////////////////////////////////////////
-    $(document).ready(function(){
-      getLanguage();  
-    });
-  </script>
-</head>
-<!------------------------------------------------------------------->
-<body>
-  <div id="language">
-    <a href="#" onclick="setLanguage('en')">English</a> 
-    <a href="#" onclick="setLanguage('bn')">বাংলা</a>
-  </div>
-  <nav>
-    <table id="tabs">
-      <tr>
-        <td><a href="about.html"><div id="about"></div></a></td>
-        <td><a href="#"><div id="place"></div></a></td>
-        <td><a href="#"><div id="registry"></div></a></td>
-        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing"><div id="picupload"></div></a></td>
-      </tr>
-    </table>
-  </nav>
-<!------------------------------------------------------------------->  
-<div>
-<table>
-  <tr>
-    <td>
-      <div id="bride"></div>
-      <div id="parentsB">Test</div>
-    </td>
-    <td>
-      <div id="groom"></div>
-    </td>
-  </tr>
-</table>
+		      var y = document.getElementsByClassName("bengali");
+		      var i;
+		      for (i = 0; i < y.length; i++) {
+		      y[i].style.display= "inherit";
+			}}
+			function LangEn(){
+		   		var x=document.getElementsByClassName("bengali");
+		      	var j;
+		      	for (j = 0; j < x.length; j++) {
+		      	x[j].style.display = "none";}
+
+		      	var y = document.getElementsByClassName("english");
+		     	var i;
+		      	for (i = 0; i < y.length; i++) {
+		      	y[i].style.display= "inherit";
+		   }}
+		</script>
+	</head>
+ 	<body>
+ 		<div id="language">
+		    <a href="#" onclick="LangEn()">English</a> 
+		    <a href="#" onclick="LangBn()">বাংলা</a>
+ 		</div>
+
+		<div id="main">
+
+			
+
+			<div id="bride">
+				<div class="english">
+					<p>
+					    <h1>Piyali Sarkar</h1>
+						Only Daughter Of<br><br>
+						Ashoke Kumar Sarkar<br>
+						and<br>
+						Shyamali Sarkar<br>
+						<h2>Address</h2>
+						Malanchapally<br>
+						Malda<br>
+						M: 9733205943
+					</p>
+				</div>
+				<div class="bengali">
+					<p>
+						<h1>পিয়ালী সরকার</h1>
+						একমাত্র কন্যা<br><br>
+						পিতা:অশোক কুমার সরকার<br>
+						মাতা: শ্যামলী সরকার<br>
+						<h2>ঠিকানা</h2>
+						মালঞ্চপল্লী<br>
+						মালদা<br>
+						মোঃ: ৯৭৩৩২০৫৯৪৩
+					</p>
+				</div>
+			</div>
+
+			<div id="groom">
+				<div class="english">
+					<p>
+					<h1>Subhrendu Chattopadhyay</h1>
+					Only Son Of<br><br>
+					Subhash Chattopadhyay<br>
+					and<br>
+					Dipali Chattopadhyay<br>
+					<h2>Address</h2>
+					Charichara Bazar Lane<br>
+					Nabadwip, Nadia<br>
+					M: 9434531153
+					</p>
+				</div>
+				<div class="bengali">
+					<p>
+					<h1>শুভ্রেন্দু চট্টোপাধ্যায়</h1>
+					একমাত্র পুত্র<br><br>
+					পিতা: সুভাষ চট্টোপাধ্যায়<br>
+					মাতা: দিপালী চট্টোপাধ্যায়<br>	
+					<h2>ঠিকানা</h2>
+					চারিচারা বাজার লেন<br>
+					নবদ্বীপ, নদীয়া<br>
+					মোঃ:৯৪৩৪৫৩১১৫৩
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 
 
 
@@ -106,7 +111,6 @@
 
 
 
-</div>
-<!------------------------------------------------------------------->  
-<div id="log">LOG:</div>
-</body></html>
+
+
+

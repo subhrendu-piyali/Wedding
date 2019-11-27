@@ -30,3 +30,10 @@ div{
 h1{
 	font-size: 40px;
 }
+img{
+	width: 30px;
+	border-radius: 5px;
+}
+.bengali{
+	font-size: 30px;
+}
