@@ -11,15 +11,20 @@ body{
 	background: url(../imgs/bkgrnd/bkgrd5.jpg);
 	background-size: cover;
 }
+/***************************/
+#language{
+	float: right;
+	display: block;
+}
 #language a{
 	padding-right: 8px;
 	font-size: 20px;
 	color: #990000;
 }
-#language{
-	float: right;
-	display: block;
+#language a:hover{
+	color: #dc143c;
 }
+/*********************/
 div{
 	display: inline-block;
 	text-align: center;
@@ -29,6 +34,31 @@ div{
 #main{
 	width: 100%;
 }
+/************************/
+nav{
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+nav a{
+	float: center;
+	color: #990000;
+}
+nav a:hover{
+	color: #dc143c;
+}
+table{
+	text-align: center;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+#tabs{
+	font-size: 30px;
+	margin-top: 10px;
+	width: 80%;
+}
+/**********************************/
 h1{
 	font-size: 40px;
 }
@@ -38,32 +68,4 @@ img{
 }
 .bengali{
 	font-size: 30px;
-}
-table{
-	text-align: center;
-	font-size: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	float: none;
-}
-nav a{
-	float: center;
-}
-#tabs{
-	font-size: 30px;
-	margin-top: 10px;
-	width: 80%;
-}
-nav{
-	background-color: #ffffff;
-	border-radius: 5px;
-}
-nav a{
-	color: #990000;
-}
-#language a:hover{
-	color: crimson;
-}
-nav a:hover{
-	color: crimson;
 }
