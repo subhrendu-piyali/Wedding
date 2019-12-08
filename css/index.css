@@ -61,4 +61,8 @@ table{
 h1{
 	text-align: center;
 	margin-top: 150px;
+	font-size: 40px;
+}
+.bengali{
+	font-size: 30px;
 }
