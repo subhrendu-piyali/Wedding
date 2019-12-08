@@ -1,33 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>SubhrenduWedsPiyali</title>
-	<link rel="stylesheet" href="css/file1.css">
-  <script type="text/javascript">
-        if (screen.width <= 720) {
-        window.location = "mobile/index.html";
-    }
-</script>
+	<head>
+		<title>SubhrenduWedsPiyali</title>
+	  	<link rel="stylesheet" href="css/index.css">
+	    <script type="text/javascript">
+	      if (screen.width <= 720) {
+	      window.location = "mobile/index.html";}
+	    </script>
+	    <script type="text/javascript">
+	      function LangBn(){
+	      var x=document.getElementsByClassName("english");
+	      var j;
+	      for (j = 0; j < x.length; j++) {
+	      x[j].style.display = "none";}
 
- 
+	      var y = document.getElementsByClassName("bengali");
+	      var i;
+	      for (i = 0; i < y.length; i++) {
+	      y[i].style.display= "inherit";
+	      }}
+	      function LangEn(){
+	      var x=document.getElementsByClassName("bengali");
+	      var j;
+	      for (j = 0; j < x.length; j++) {
+	      x[j].style.display = "none";}
 
-</head>
-<body>
+	      var y = document.getElementsByClassName("english");
+	      var i;
+	      for (i = 0; i < y.length; i++) {
+	      y[i].style.display= "inherit";
+	      }}
+	    </script>
+	    <style type="text/css">
+				.bengali{
+			display: none;
+			}
+		</style>
+	</head>
+	<body>
+      <div id="language">
+        <a href="#" onclick="LangEn()">English</a> 
+        <a href="#" onclick="LangBn()">বাংলা</a>
+      </div>
 
-  <div id="language">
-  <a href="">English</a><a href="">বাংলা</a>
-  </div>
-  <div id="name">
-    <table>
+
+
+      <nav class="english">
+    <table id="tabs">
+      <tr>
+      	<td><a href="index.html">Home</a></td>
+        <td><a href="about.html">Bride & Groom</a></td>
+        <td><a href="venue.html">When & Where</a></td>
+        <td><a target="_blank" href="https://www.weddingwishlist.com/subhrendu-piyali">Gift Registry</a></td>
+        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing">Upload Image</a></td>
+      </tr>
+    </table>
+  </nav>
+  <nav class="bengali">
+    <table id="tabs">
+      <tr>
+      	<td><a href="index.html">হোম</a></td>
+        <td><a href="about.html">পাত্র ও পাত্রী</a></td>
+        <td><a href="venue.html">কখন ও কোথায়</a></td>
+        <td><a target="_blank" href="https://www.weddingwishlist.com/subhrendu-piyali">	উপহার নিবন্ধন</a></td>
+        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing">ছবি আপলোড</a></td>
+      </tr>
+    </table>
+  </nav>
+
+
+  <h1 class="english">
+  	Subhrendu Chattopadhyay<br>
+	Weds<br>
+	Piyali Sarkar<br>
+	4th February, 2020
+  </h1>
+
+	<h1 class="bengali">
+	  	শুভ পরিণয়<br>
+		শুভ্রেন্দু চট্টোপাধ্যায়<br>
+		ও<br>
+		পিয়ালী সরকার<br>
+		২০শে মাঘ, ১৪২৬ (৪ঠা ফেব্রুয়ারী, ২০২০)
+	</h1>
+
+      <!------------
+
+  <div class="name" class="english">
+    <table class="english">
       <tr><td>Subhrendu Chattopadhyay</td></tr>
       <tr><td>weds</td></tr>
       <tr><td>Piyali Sarkar</td></tr>
       <tr><td id="date">4th February, 2020</td></tr>
     </table>
   </div>
+
+  <div class="name" class="bengali">
+    <table class="bengali">
+	  <tr><td>শুভ পরিণয়</td></tr>
+	  <tr><td>শুভ্রেন্দু চট্টোপাধ্যায়</td></tr>
+	  <tr><td>ও</td></tr>
+	  <tr><td>পিয়ালী সরকার</td></tr>
+	  <tr><td id="date">২০শে মাঘ, ১৪২৬ (৪ঠা ফেব্রুয়ারী, ২০২০)</td></tr>
+    </table>
+  </div>
   
-  <nav>
+  <nav class="english">
     <table id="tabs">
       <tr>
         <td><a href="about.html">Bride & Groom</a></td>
@@ -37,21 +115,13 @@
       </tr>
     </table>
   </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-	</html>
+  <nav class="bengali">
+    <table id="tabs">
+      <tr>
+        <td><a href="about.html">পাত্র ও পাত্রী</a></td>
+        <td><a href="venue.html">কখন ও কোথায়</a></td>
+        <td><a target="_blank" href="https://www.weddingwishlist.com/subhrendu-piyali">	উপহার নিবন্ধন</a></td>
+        <td style="border-right: none;"><a target="_blank" href="https://docs.google.com/forms/d/1N34zoByP_ATFxgQ8TUs-x4TAYEMiKU7aL786kFojG5Q/edit?usp=sharing">ছবি আপলোড</a></td>
+      </tr>
+    </table>
+  </nav>

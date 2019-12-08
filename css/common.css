@@ -27,7 +27,7 @@ table{
 	margin-right: auto;
 	float: none;
 }
-#name{
+.name{
 	padding-top: 100px;
 	font-size: 30px;
 	margin-left: auto;

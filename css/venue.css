@@ -37,3 +37,21 @@ img{
 .bengali{
 	font-size: 30px;
 }
+table{
+	text-align: center;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+nav a{
+	float: center;
+}
+#tabs{
+	font-size: 30px;
+	margin-top: 10px;
+	width: 80%;
+}
+#tabs td{
+	border-right: 1px solid #ffffff;
+}
