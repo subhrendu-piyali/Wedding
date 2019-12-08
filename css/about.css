@@ -2,7 +2,7 @@
 body, html {
   height: 100%;
   color: #ffffff;
-  font-family: Brush Script MT;
+  font-family: Brush Script MT, "Lucida Console", Monaco, monospace;
 }
 a{
 	text-decoration: none;
