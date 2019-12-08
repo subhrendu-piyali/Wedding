@@ -15,6 +15,7 @@ body{
 #language a{
 	padding-right: 8px;
 	font-size: 20px;
+	color:#990000;
 }
 #language{
 	float: right;
@@ -57,6 +58,16 @@ nav a{
 	margin-top: 10px;
 	width: 80%;
 }
-#tabs td{
-	border-right: 1px solid #ffffff;
+nav{
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+nav a{
+	color: #990000;
+}
+#language a:hover{
+	color: crimson;
+}
+nav a:hover{
+	color: crimson;
 }

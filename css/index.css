@@ -15,6 +15,13 @@ body{
 #language a{
 	padding-right: 8px;
 	font-size: 20px;
+	color: #990000;
+}
+#language a:hover{
+	color: crimson;
+}
+nav a:hover{
+	color: crimson;
 }
 #language{
 	float: right;
@@ -35,10 +42,23 @@ nav a{
 	margin-top: 10px;
 	width: 80%;
 }
-#tabs td{
-	border-right: 1px solid #ffffff;
-}
 h1{
 	text-align: center;
 	margin-top: 150px;
+}
+nav{
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+nav a{
+	color: #990000;
+}
+#main{
+	width: 100%;
+}
+div{
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+	margin-right: 15px;
 }
