@@ -3,41 +3,18 @@
 	<head>
 		<meta charset = "UTF-8">
 		<title>About</title>
+		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/about.css">
+		<script type="text/javascript" src="js/langChange.js"></script>
 		<style type="text/css">
 				.bengali{
 			display: none;
 			}
 		</style>
-		
-		<script type="text/javascript">
-			function LangBn(){
-		      var x=document.getElementsByClassName("english");
-		      var j;
-		      for (j = 0; j < x.length; j++) {
-		      x[j].style.display = "none";}
-
-		      var y = document.getElementsByClassName("bengali");
-		      var i;
-		      for (i = 0; i < y.length; i++) {
-		      y[i].style.display= "inherit";
-			}}
-			function LangEn(){
-		   		var x=document.getElementsByClassName("bengali");
-		      	var j;
-		      	for (j = 0; j < x.length; j++) {
-		      	x[j].style.display = "none";}
-
-		      	var y = document.getElementsByClassName("english");
-		     	var i;
-		      	for (i = 0; i < y.length; i++) {
-		      	y[i].style.display= "inherit";
-		   }}
-		</script>
 	</head>
  	<body>
- 		<div id="language">
-		    <a href="#" onclick="LangEn()">English</a> 
+      <div id="language">
+		    <a href="#" onclick="LangEn()">English</a> |
 		    <a href="#" onclick="LangBn()">বাংলা</a>
  		</div><br><br>
 
